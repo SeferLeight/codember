@@ -1,11 +1,14 @@
 {
-  "name": "codember",
-  "version": "1.0.0",
-  "description": "Project to midudev challenge codember",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+	"name": "codember",
+	"version": "1.0.0",
+	"description": "Project to midudev challenge codember",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^29.7.0"
+	}
 }
