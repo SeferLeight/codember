@@ -1,10 +1,6 @@
-function lowerCase(str) {
-	return str.toLowerCase();
-}
-
 function patternMessage(message) {
 	let pattern = '';
-	const messageLowered = lowerCase(message);
+	const messageLowered = message.toLowerCase();
 	const messageArray = messageLowered.split(' ');
 	const uniqueWords = new Set(messageArray);
 	uniqueWords.forEach((word) => {
