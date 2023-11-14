@@ -4,13 +4,13 @@
 
 Desafíos de midudev para codember 2023 (https://codember.dev/) .
 
-##Ejecutar soluciones:
+## Ejecutar soluciones:
 
 ```
 node index.js
 ```
 
-##Ejecutra tests:
+## Ejecutra tests:
 
 ```
 npm install
@@ -20,7 +20,7 @@ npm install
 npm test
 ```
 
-##Secretos:
+## Secretos:
 
 | #   | Secreto          | Solución                           |
 | --- | ---------------- | ---------------------------------- |
