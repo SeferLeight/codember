@@ -4,6 +4,7 @@ const solution01 = require('./solutions/solution01');
 const solution02 = require('./solutions/solution02');
 const solution03 = require('./solutions/solution03');
 const solution04 = require('./solutions/solution04');
+const solution05 = require('./solutions/solution05');
 
 function challenge01() {
 	try {
@@ -49,7 +50,23 @@ function challenge04() {
 	}
 }
 
+function challenge05() {
+	try {
+		const input = fs.readFileSync('./mocks/database_attacked.txt', 'utf8');
+		const inputWithoutCarriageReturn = input.replace(/[\r]/gm, '');
+		const rawUsers = inputWithoutCarriageReturn.split('\n');
+		const usersChecked = solution05.validateRawUsersArray(rawUsers);
+		const message = solution05.getInvalidUsersMessage(
+			usersChecked.invalidUsers
+		);
+		console.log('Solución 5: ', message);
+	} catch (err) {
+		console.log(err);
+	}
+}
+
 challenge01();
 challenge02();
 challenge03();
 challenge04();
+challenge05();
