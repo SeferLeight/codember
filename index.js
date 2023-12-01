@@ -3,6 +3,7 @@ fs = require('fs');
 const solution01 = require('./solutions/solution01');
 const solution02 = require('./solutions/solution02');
 const solution03 = require('./solutions/solution03');
+const solution04 = require('./solutions/solution04');
 
 function challenge01() {
 	try {
@@ -36,6 +37,19 @@ function challenge03() {
 	}
 }
 
-//challenge01();
-//challenge02();
+function challenge04() {
+	try {
+		const input = fs.readFileSync('./mocks/files_quarantine.txt', 'utf8');
+		const inputWithoutCarriageReturn = input.replace(/[\r]/gm, '');
+		const files = inputWithoutCarriageReturn.split('\n');
+		const filesChecked = solution04.checkFilesArray(files);
+		console.log('Solución 4: ', filesChecked.validFiles[32]);
+	} catch (err) {
+		console.log(err);
+	}
+}
+
+challenge01();
+challenge02();
 challenge03();
+challenge04();
