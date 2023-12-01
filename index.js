@@ -2,6 +2,7 @@ fs = require('fs');
 
 const solution01 = require('./solutions/solution01');
 const solution02 = require('./solutions/solution02');
+const solution03 = require('./solutions/solution03');
 
 function challenge01() {
 	try {
@@ -23,5 +24,18 @@ function challenge02() {
 	}
 }
 
-challenge01();
-challenge02();
+function challenge03() {
+	try {
+		const input = fs.readFileSync('./mocks/encryption_policies.txt', 'utf8');
+		const inputWithoutCarriageReturn = input.replace(/[\r]/gm, '');
+		const keys = inputWithoutCarriageReturn.split('\n');
+		const keysChecked = solution03.checkKeysArray(keys);
+		console.log('Solución 3: ', keysChecked.invalidKeys[41]);
+	} catch (err) {
+		console.log(err);
+	}
+}
+
+//challenge01();
+//challenge02();
+challenge03();
