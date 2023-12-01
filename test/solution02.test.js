@@ -11,3 +11,11 @@ test('more examples 2', () => {
 test('more examples 3', () => {
 	expect(solution02.compiler('##@*@&')).toBe('0');
 });
+
+test('example with if', () => {
+	expect(solution02.compilerWithIf('##*&#&')).toBe('45');
+})
+
+test('example with switch', () => {
+	expect(solution02.compilerWithSwitch('##*&#&')).toBe('45');
+})

@@ -10,4 +10,29 @@ function patternMessage(message) {
 	return pattern;
 }
 
-module.exports = { patternMessage };
+function patternMessageFor(message){
+	let pattern = '';
+
+	const messageLower = message.toLowerCase();
+	const messageArray = messageLower.split(' ');
+	const messageKeys = [];
+
+	for(let i =0; i<messageArray.length; i++){
+		if(!messageKeys.includes(messageArray[i])){
+			messageKeys.push(messageArray[i])
+		}
+	}
+
+	for(let i = 0; i<messageKeys.length;i++){
+		let countObject = 0;
+		for(let j = 0; j<messageArray.length; j++){
+			if(messageArray[j] === messageKeys[i]){
+				countObject++;
+			}
+		}
+		pattern = pattern + messageKeys[i] + countObject.toString();
+	}
+	return pattern;
+}
+
+module.exports = { patternMessage, patternMessageFor };

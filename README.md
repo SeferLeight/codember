@@ -1,10 +1,26 @@
 ![codember](./images/codember.png)
 
-# [codember](https://codember.dev)
+## [codember](https://codember.dev)
 
 Desafíos de midudev para codember 2023 (https://codember.dev/) .
 
-#Secretos:
+## Ejecutar soluciones:
+
+```
+node index.js
+```
+
+## Ejecutra tests:
+
+```
+npm install
+```
+
+```
+npm test
+```
+
+## Secretos:
 
 | #   | Secreto          | Solución                           |
 | --- | ---------------- | ---------------------------------- |

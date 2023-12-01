@@ -29,4 +29,26 @@ function compilerWithIf(input) {
 	return print;
 }
 
-module.exports = { compiler, compilerWithIf };
+function compilerWithSwitch(input) {
+	const inputArray = Array.from(input);
+	let print = '';
+	let value = 0;
+	inputArray.forEach((character) => {
+		switch(character){
+			case '#':
+					value += 1;
+				break;
+			case '@': 
+					value -= 1;
+				break;
+			case '*':
+					value *= value;
+				break;
+			case '&':
+					print += String(value);
+				break;
+		}
+	});
+	return print;
+}
+module.exports = { compiler, compilerWithIf, compilerWithSwitch };
